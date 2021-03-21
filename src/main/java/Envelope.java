@@ -4,38 +4,40 @@ import java.util.ArrayList;
 
 public class Envelope {
 
+    // Reads and updates resent history and transactions.
+    public ArrayList<String> readHistory() throws IOException {
+        try (InputStream inputStream = Envelope.class.getResourceAsStream("/history.txt")) {
 
-//    BufferedReader br = new BufferedReader(new FileReader("history.json"));
-//    private ArrayList<String> envelopes = new ArrayList<String>();
-//    String testAmount = br.readLine();
-//    while(testAmount !=null)
-//
-//    {
-//        envelopes.add(testAmount);
-//        testAmount = br.readLine();
-//    }
+            BufferedReader file = new BufferedReader(new InputStreamReader(inputStream));
+            for (; ; ) {
+                String line = file.readLine();
+                if (line == null) {
+                    break;
+                }
+                envelopesHistory.add(line);
+            }
+            return envelopesHistory;
+        }
+    }
 
 
-    InputStream inputStream = Envelope.class.getResourceAsStream("/history.json");
-
-
-    public ArrayList<Envelope> envelopesHistory;
+    protected final ArrayList<String> envelopesHistory = new ArrayList<String>();
     private String name;
     private String envelopesType;
     private double balance;
-    boolean type;
+//    boolean type; - checks whether is the right envelope is chosen.
 
 
-    Envelope(String ownersName, String envelopesType, double balance) throws IOException {
+    Envelope(String ownersName, String envelopesType, double firstDeposit) throws IOException {
         this.name = ownersName;
         this.envelopesType = envelopesType;
-        this.balance = balance;
-
+        this.balance = deposit(firstDeposit);
 
     }
 
     public double deposit(double amount) {
         balance += amount;
+
         return balance;
     }
 
@@ -44,7 +46,8 @@ public class Envelope {
             throw new IllegalArgumentException("There are not enough savings in the envelope.");
         }
         balance -= amount;
-//        envelopes.add(amount);
+        envelopesHistory.add(String.valueOf(amount));
+
         return balance;
     }
 
@@ -52,17 +55,14 @@ public class Envelope {
 // Getters and setters for balance and history;
 
     public double getBalance() {
+        System.out.println("The current balance of an envelope - " + envelopesType + " is:");
         return balance;
     }
 
-    public ArrayList<Envelope> getEnvelopesHistory() {
+
+    public ArrayList<String> getEnvelopesHistory() {
+        System.out.println("The latest transactions:");
         return envelopesHistory;
     }
-
-    public void setEnvelopesHistory(ArrayList<Envelope> envelopesHistory) {
-        this.envelopesHistory = envelopesHistory;
-    }
-
-
 }
 
