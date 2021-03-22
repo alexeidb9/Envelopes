@@ -9,13 +9,14 @@ public class Envelope {
         try (InputStream inputStream = Envelope.class.getResourceAsStream("/history.txt")) {
 
             BufferedReader file = new BufferedReader(new InputStreamReader(inputStream));
-            for (; ; ) {
+            for ( ; ; ) {
                 String line = file.readLine();
                 if (line == null) {
                     break;
                 }
                 envelopesHistory.add(line);
             }
+            System.out.println("The latest transactions: (D - Deposits, W - Withdraws) for " + envelopesType + " are: ");
             return envelopesHistory;
         }
     }
@@ -38,6 +39,8 @@ public class Envelope {
     public double deposit(double amount) {
         balance += amount;
 
+        envelopesHistory.add(String.valueOf("D" + amount));
+
         return balance;
     }
 
@@ -46,23 +49,16 @@ public class Envelope {
             throw new IllegalArgumentException("There are not enough savings in the envelope.");
         }
         balance -= amount;
-        envelopesHistory.add(String.valueOf(amount));
+        envelopesHistory.add(String.valueOf("W" + amount));
 
         return balance;
     }
 
-
-// Getters and setters for balance and history;
 
     public double getBalance() {
         System.out.println("The current balance of an envelope - " + envelopesType + " is:");
         return balance;
     }
 
-
-    public ArrayList<String> getEnvelopesHistory() {
-        System.out.println("The latest transactions:");
-        return envelopesHistory;
-    }
 }
 
