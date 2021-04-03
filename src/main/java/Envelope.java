@@ -1,64 +1,42 @@
 import java.io.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 
-public class Envelope {
+public class Envelope extends TransactionsHistory{
 
-    // Reads and updates resent history and transactions.
-    public ArrayList<String> readHistory() throws IOException {
-        try (InputStream inputStream = Envelope.class.getResourceAsStream("/history.txt")) {
-
-            BufferedReader file = new BufferedReader(new InputStreamReader(inputStream));
-            for ( ; ; ) {
-                String line = file.readLine();
-                if (line == null) {
-                    break;
-                }
-                envelopesHistory.add(line);
-            }
-            System.out.println("The latest transactions: (D - Deposits, W - Withdraws) for " + envelopesType + " are: ");
-            return envelopesHistory;
-        }
-    }
-
-
-    protected final ArrayList<String> envelopesHistory = new ArrayList<String>();
     private String name;
-    private String envelopesType;
-    private double balance;
-//    boolean type; - checks whether is the right envelope is chosen.
+    private String envelopeType;
+    private BigDecimal envelopeBalance;
 
-
-    Envelope(String ownersName, String envelopesType, double firstDeposit) throws IOException {
-        this.name = ownersName;
-        this.envelopesType = envelopesType;
-        this.balance = deposit(firstDeposit);
-
+    public Envelope(String name, String envelopeType, BigDecimal envelopeBalance) {
+        this.name = name;
+        this.envelopeType = envelopeType;
+        this.envelopeBalance = envelopeBalance;
     }
 
-    public double deposit(double amount) {
-        balance += amount;
-
-        envelopesHistory.add(String.valueOf("D" + amount));
-
-        return balance;
+    public String getName() {
+        return name;
     }
 
-    public double withdraw(double amount) {
-        if (balance < amount) {
-            throw new IllegalArgumentException("There are not enough savings in the envelope.");
-        }
-        balance -= amount;
-        envelopesHistory.add(String.valueOf("W" + amount));
-
-        return balance;
+    public void setName(String name) {
+        this.name = name;
     }
 
-
-    public double getBalance() {
-        System.out.println("The current balance of an envelope - " + envelopesType + " is:");
-        return balance;
+    public String getEnvelopeType() {
+        return envelopeType;
     }
 
+    public void setEnvelopeType(String envelopeType) {
+        this.envelopeType = envelopeType;
+    }
+
+    public BigDecimal getEnvelopeBalance() {
+        return envelopeBalance;
+    }
+
+    public void setEnvelopeBalance(BigDecimal envelopeBalance) {
+        this.envelopeBalance = envelopeBalance;
+    }
 }
 
