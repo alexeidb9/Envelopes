@@ -3,7 +3,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 
-public class Envelope extends TransactionsHistory{
+public class Envelope {
 
     private String name;
     private String envelopeType;
