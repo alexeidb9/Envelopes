@@ -1,15 +1,16 @@
-import java.io.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-
 
 public class Envelope {
 
     private String name;
     private String envelopeType;
-    private BigDecimal envelopeBalance;
+    private double envelopeBalance;
 
-    public Envelope(String name, String envelopeType, BigDecimal envelopeBalance) {
+    public Envelope() {
+
+    }
+
+    public Envelope(String name, String envelopeType,final double envelopeBalance) {
         this.name = name;
         this.envelopeType = envelopeType;
         this.envelopeBalance = envelopeBalance;
@@ -19,7 +20,7 @@ public class Envelope {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -27,15 +28,15 @@ public class Envelope {
         return envelopeType;
     }
 
-    public void setEnvelopeType(String envelopeType) {
+    public void setEnvelopeType(final String envelopeType) {
         this.envelopeType = envelopeType;
     }
 
-    public BigDecimal getEnvelopeBalance() {
+    public static double getEnvelopeBalance() {
         return envelopeBalance;
     }
 
-    public void setEnvelopeBalance(BigDecimal envelopeBalance) {
+    public void setEnvelopeBalance(final double envelopeBalance) {
         this.envelopeBalance = envelopeBalance;
     }
 }

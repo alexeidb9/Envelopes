@@ -1,13 +1,13 @@
-import java.math.BigDecimal;
-
 public class MoneyOperations {
 
-    public BigDecimal deposit(BigDecimal amount) {
+    
+
+    public double deposit(double amount) {
 
 
         envelopeBalance += amount;
 
-        envelopesHistory.add(String.valueOf("D" + amount));
+        Envelope.envelopesHistory.add(String.valueOf("D" + amount));
 
         return balance;
     }
