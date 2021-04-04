@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Envelopes_and_Pennies" target="8" />
+      <module name="Envelopes_and_Pennies" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

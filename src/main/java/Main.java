@@ -7,7 +7,6 @@ public class Main {
         Envelope secondEnvelope = new Envelope("Vika", "Savings for Dental Care" ,45000);
 
 
-
     }
 
 }

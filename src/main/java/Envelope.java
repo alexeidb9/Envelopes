@@ -1,5 +1,3 @@
-import java.math.BigDecimal;
-
 public class Envelope {
 
     private String name;
@@ -7,10 +5,17 @@ public class Envelope {
     private double envelopeBalance;
 
     public Envelope() {
-
+        System.out.println("This is a default constructor");
     }
 
-    public Envelope(String name, String envelopeType,final double envelopeBalance) {
+    public Envelope(String name, String envelopeType) {
+
+        this.name = name;
+        this.envelopeType = envelopeType;
+        this.envelopeBalance = 123;
+    }
+
+    public Envelope(String name, String envelopeType, final double envelopeBalance) {
         this.name = name;
         this.envelopeType = envelopeType;
         this.envelopeBalance = envelopeBalance;
@@ -32,7 +37,7 @@ public class Envelope {
         this.envelopeType = envelopeType;
     }
 
-    public static double getEnvelopeBalance() {
+    public double getEnvelopeBalance() {
         return envelopeBalance;
     }
 
