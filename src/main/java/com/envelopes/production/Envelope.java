@@ -1,4 +1,6 @@
-//Envelope & PriorityScale - same package
+package com.envelopes.production;
+
+import static com.envelopes.production.PriorityScale.*;
 
 public class Envelope {
 
@@ -8,10 +10,11 @@ public class Envelope {
     private PriorityScale priority;
 
     public Envelope() {
+        this("NO NAME", "NO TYPE", 0.0, NOT_RATED);
     }
 
     public Envelope(String name, String envelopeType, double envelopeBalance) {
-        this(name, envelopeType, envelopeBalance, PriorityScale.NOT_RATED);
+        this(name, envelopeType, envelopeBalance, NOT_RATED);
     }
 
     public Envelope(String name, String envelopeType, double envelopeBalance, PriorityScale priority) {
@@ -20,7 +23,6 @@ public class Envelope {
         this.envelopeBalance = envelopeBalance;
         this.priority = priority;
     }
-
 
 
     public String getName() {

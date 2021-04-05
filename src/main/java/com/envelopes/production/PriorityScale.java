@@ -1,3 +1,5 @@
+package com.envelopes.production;
+
 public enum PriorityScale {
 
     NOT_RATED("\u2606\u2606\u2606\u2606\u2606"),
