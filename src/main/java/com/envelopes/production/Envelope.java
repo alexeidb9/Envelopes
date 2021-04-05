@@ -1,25 +1,27 @@
+//Envelope & PriorityScale - same package
+
 public class Envelope {
 
     private String name;
     private String envelopeType;
     private double envelopeBalance;
+    private PriorityScale priority;
 
     public Envelope() {
-        System.out.println("This is a default constructor");
     }
 
-    public Envelope(String name, String envelopeType) {
-
-        this.name = name;
-        this.envelopeType = envelopeType;
-        this.envelopeBalance = 123;
+    public Envelope(String name, String envelopeType, double envelopeBalance) {
+        this(name, envelopeType, envelopeBalance, PriorityScale.NOT_RATED);
     }
 
-    public Envelope(String name, String envelopeType, final double envelopeBalance) {
+    public Envelope(String name, String envelopeType, double envelopeBalance, PriorityScale priority) {
         this.name = name;
         this.envelopeType = envelopeType;
         this.envelopeBalance = envelopeBalance;
+        this.priority = priority;
     }
+
+
 
     public String getName() {
         return name;
@@ -44,5 +46,10 @@ public class Envelope {
     public void setEnvelopeBalance(final double envelopeBalance) {
         this.envelopeBalance = envelopeBalance;
     }
+
+    public PriorityScale getPriority() {
+        return priority;
+    }
+
 }
 
