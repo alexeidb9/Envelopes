@@ -1,24 +1,39 @@
-package com.envelopes.production.Envelopes;
+package com.envelopes.production.domain;
 
 import com.envelopes.production.Operations.PriorityScale;
 import com.envelopes.production.Operations.Scalable;
+import lombok.Data;
+import org.hibernate.annotations.Cascade;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import static com.envelopes.production.Operations.PriorityScale.*;
 
+@Data
 @Entity
 public class Envelope implements Scalable {
 
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
     private String type;
-    private double balance;
+    private Double balance;
     private PriorityScale priority;
 
+    //private "difficulty"
+
+    // Large object
+    @Lob
+    private Byte[] image;
+
+
+    //todo add
+    @OneToOne(cascade = CascadeType.ALL)
+    private Notes notes;
+
+//    private Transaction transaction;
 
     public Envelope() {
         this("NO NAME", "NO TYPE", 0.0, NOT_RATED);
@@ -35,23 +50,6 @@ public class Envelope implements Scalable {
         this.priority = priority;
 
 
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public PriorityScale getPriority() {
-        return priority;
     }
 
 

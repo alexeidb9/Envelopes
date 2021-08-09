@@ -1,5 +1,6 @@
 package com.envelopes.production.Envelopes;
 
+import com.envelopes.production.domain.Envelope;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

@@ -6,6 +6,7 @@ package com.envelopes.production.Envelopes;
 import com.envelopes.production.Operations.PriorityScale;
 import com.envelopes.production.Operations.Rateable;
 import com.envelopes.production.Operations.Review;
+import com.envelopes.production.domain.Envelope;
 
 import java.text.MessageFormat;
 import java.text.NumberFormat;
