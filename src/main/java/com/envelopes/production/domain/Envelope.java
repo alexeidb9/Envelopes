@@ -7,6 +7,8 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
+import java.util.Set;
+
 import static com.envelopes.production.Operations.PriorityScale.*;
 
 @Data
@@ -15,6 +17,7 @@ public class Envelope implements Scalable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //Long datatype is commonf for id value. (integer has it's limits)
     private Long id;
 
     private String name;
@@ -27,35 +30,22 @@ public class Envelope implements Scalable {
     // Large object
     @Lob
     private Byte[] image;
+    // We want the envelope to own it, so we use a cascade type and we will persist all operations. making also envelope a target property on
+//    donation class
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "envelope")
+    private Set<Donation> donation;
 
 
     //todo add
+
+    // Makes this entity an owner of Notes. (If we delete Envelope it going to persist down
+    // and delete Notes - conversely if we delete the Notes object, the Envelope will remain in database)
+
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
 //    private Transaction transaction;
-
-    public Envelope() {
-        this("NO NAME", "NO TYPE", 0.0, NOT_RATED);
-    }
-
-    public Envelope(String name, String type, double balance) {
-        this(name, type, balance, NOT_RATED);
-    }
-
-    public Envelope(String name, String type, double balance, PriorityScale priority) {
-        this.name = name;
-        this.type = type;
-        this.balance = balance;
-        this.priority = priority;
-
-
-    }
-
-
-    public Envelope applyPriority(PriorityScale newPriority) {
-        return new Envelope(name, type, balance, newPriority);
-    }
 
 
     @Override
