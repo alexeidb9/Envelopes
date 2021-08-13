@@ -3,7 +3,7 @@ package com.envelopes.production.Envelopes;
 // Create 3 types of envelopes using object factory
 
 
-import com.envelopes.production.Operations.PriorityScale;
+import com.envelopes.production.domain.PriorityScale;
 import com.envelopes.production.Operations.Rateable;
 import com.envelopes.production.Operations.Review;
 import com.envelopes.production.domain.Envelope;

@@ -2,7 +2,7 @@ package com.envelopes.production;
 
 import com.envelopes.production.domain.Envelope;
 import com.envelopes.production.Envelopes.EnvelopeManager;
-import com.envelopes.production.Operations.PriorityScale;
+import com.envelopes.production.domain.PriorityScale;
 
 import java.util.Locale;
 

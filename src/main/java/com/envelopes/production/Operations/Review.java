@@ -1,6 +1,6 @@
 package com.envelopes.production.Operations;
 
-import com.envelopes.production.Operations.PriorityScale;
+import com.envelopes.production.domain.PriorityScale;
 
 public class Review {
 

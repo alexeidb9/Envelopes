@@ -1,5 +1,8 @@
-package com.envelopes.production.Operations;
+package com.envelopes.production.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public enum PriorityScale {
 
     NOT_RATED("\u2606\u2606\u2606\u2606\u2606"),
