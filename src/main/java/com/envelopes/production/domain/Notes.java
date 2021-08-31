@@ -16,7 +16,6 @@ public class Notes {
     private Envelope envelope;
 
     @Lob
-    // For large objects. (Blob - binary large objects, etc.)
     private String budgetNotes;
 
 

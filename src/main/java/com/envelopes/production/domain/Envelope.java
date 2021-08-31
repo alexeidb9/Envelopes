@@ -2,6 +2,7 @@ package com.envelopes.production.domain;
 
 import com.envelopes.production.Operations.Scalable;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 
@@ -13,25 +14,28 @@ public class Envelope implements Scalable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //Long datatype is commonf for id value. (integer has it's limits)
     private Long id;
 
     private String name;
     private String type;
     private Double balance;
 
-    //private "difficulty"
+    public Envelope() {
 
-    // Large object
-    @Lob
-    private Byte[] image;
-    // We want the envelope to own it, so we use a cascade type and we will persist all operations. making also envelope a target property on
-//    donation class
+    }
 
-
-    // Ordinal is default (1,2,3), String - will get a string value out of enum.
     @Enumerated(value = EnumType.STRING)
     private PriorityScale priorityScale;
+
+
+//    // Large object
+//    @Lob
+//    @OneToOne(cascade = CascadeType.ALL)
+//    private byte[] image;
+//    /* We want the envelope to own it, so we use a cascade type and
+//    we will persist all operations. (making also envelope a target property on donation class) */
+
+
 
     @ManyToMany
     //specifying, naming the table (envelope_category)
@@ -51,6 +55,11 @@ public class Envelope implements Scalable {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
+
+    public Envelope(String name, String envelopeType, double envelopeBalance, PriorityScale priority) {
+    }
+
+
 
 //    private Transaction transaction;
 

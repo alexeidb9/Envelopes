@@ -16,8 +16,7 @@ public class Donation {
     private String recipientsName;
     private BigDecimal amount;
 
-    // fetch Eager - is a default behaviour, but it is useful to explicitely show an intent.
-    //meaning it will be retrieved everytime from the database
+
     @OneToOne(fetch = FetchType.EAGER)
     private UnitOfMeasure unitOfMeasure;
 
