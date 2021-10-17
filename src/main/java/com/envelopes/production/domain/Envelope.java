@@ -9,7 +9,6 @@ import java.util.Set;
 
 
 /*Assignment - Display a list of Envelopes
-- Add any needed Unit Of Measure to data.sql
 - Use Bootstrap class to create envelopes on startup
 - create service to return envelope list to controller
 - pass list to Thymeleaf view to display on index page

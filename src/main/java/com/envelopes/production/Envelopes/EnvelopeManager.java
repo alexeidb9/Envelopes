@@ -63,7 +63,7 @@ public class EnvelopeManager {
         }
 //        review = new Review(scale, comments);
 //        this.envelope = (Envelope) envelope.applyScale(scale);
-        this.envelope = envelope.applyScale(Rateable.convert(Math.round((float) sum / i));
+        this.envelope = envelope.applyScale(Rateable.convert(Math.round((float) sum / i)));
         return this.envelope;
 
     }
@@ -78,7 +78,7 @@ public class EnvelopeManager {
         for (Review review : reviews) {
             if (review == null) {
             break;
-            }
+
                 txt.append(MessageFormat.format(resources.getString("review"),
                         review.getScale().getStars(),
                         review.getComments()));
