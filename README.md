@@ -1,5 +1,4 @@
 # Envelopes_and_Pennies
-E&amp;P: Personal Finance, Expense Tracker based on envelope budgeting method.
+E&P: Personal Finance, Expense WEB Tracker based on known budgeting method.
 
-
-The app to help track your budget and master impulsive shopping! That's about all. 
+Using Spring Boot, Spring Security, Thymeleaf and MySQL database.
