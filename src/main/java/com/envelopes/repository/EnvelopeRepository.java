@@ -1,12 +1,11 @@
 package com.envelopes.repository;
 
-import com.envelopes.model.Envelope;
-import org.springframework.data.repository.CrudRepository;
+import com.envelopes.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
-public interface EnvelopeRepository extends CrudRepository<Envelope, Long> {
-
-        List<Envelope> findByName (String name);
+@Repository
+public interface EnvelopeRepository extends JpaRepository<Envelope, Long>{
 
 }

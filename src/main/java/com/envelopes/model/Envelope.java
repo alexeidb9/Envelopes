@@ -47,7 +47,7 @@ public class Envelope implements Scalable {
 
     @ManyToMany
     //specifying, naming the table (envelope_category)
-    @JoinTable(name = "envelope_category",
+    @JoinTable(name = "category",
             joinColumns = @JoinColumn(name = "envelope_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories;

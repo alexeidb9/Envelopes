@@ -1,54 +1,37 @@
 package com.envelopes.controller;
 
-import com.envelopes.repository.EnvelopeRepository;
+import com.envelopes.service.EnvelopeService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 @AllArgsConstructor
-@RequestMapping("/api/envelope")
+@RequestMapping("/envelope")
 class EnvelopeController {
 
 
     @Autowired
-    private EnvelopeRepository envelopeRepository;
+    private EnvelopeService envelopeService;
 
     @GetMapping
     public Iterable findAll () {
-        return envelopeRepository.findAll();
+        return envelopeService.findAll();
     }
 
     @GetMapping
     public List findByName (String name) {
-        return envelopeRepository.findByName(name);
+        return envelopeService.findByName(name);
     }
 
 
 
 }
 
-
-//package com.envelopes.controller;
-//
-//import java.util.List;
-//
-//import com.envelopes.model.Employee;
-//import com.envelopes.service.EmployeeService;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.data.domain.Page;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.ui.Model;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.ModelAttribute;
-//import org.springframework.web.bind.annotation.PathVariable;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestParam;
-//
 //
 //@Controller
 //public class EmployeeController {
