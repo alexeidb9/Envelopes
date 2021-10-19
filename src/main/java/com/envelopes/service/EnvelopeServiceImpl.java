@@ -19,17 +19,14 @@ public class EnvelopeServiceImpl {
 	@Autowired
 	private EnvelopeRepository envelopeRepository;
 
-	@Override
 	public List<Envelope> getAllEnvelopes() {
 		return envelopeRepository.findAll();
 	}
 
-	@Override
 	public void saveEnvelope(Envelope envelope) {
 		this.envelopeRepository.save(envelope);
 	}
 
-	@Override
 	public Envelope getEnvelopeById(long id) {
 		Optional<Envelope> optional = envelopeRepository.findById(id);
 		Envelope envelope = null;
@@ -41,12 +38,10 @@ public class EnvelopeServiceImpl {
 		return envelope;
 	}
 
-	@Override
 	public void deleteEnvelopeById(long id) {
 		this.envelopeRepository.deleteById(id);
 	}
 
-	@Override
 	public Page<Envelope> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection) {
 		Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
 			Sort.by(sortField).descending();
