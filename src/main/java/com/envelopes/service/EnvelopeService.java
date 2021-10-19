@@ -1,6 +1,5 @@
 package com.envelopes.service;
 
-import com.envelopes.model.Employee;
 import com.envelopes.model.Envelope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.repository.CrudRepository;
