@@ -2,7 +2,6 @@ package com.envelopes.model;
 
 public enum PriorityScale {
 
-
     NOT_RATED("\u2606\u2606\u2606\u2606\u2606"),
     ONE_STAR("\u2605\u2606\u2606\u2606\u2606"),
     TWO_STAR("\u2605\u2605\u2606\u2606\u2606"),

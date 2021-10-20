@@ -7,22 +7,9 @@ import javax.persistence.*;
 
 import java.util.Set;
 
-
-/*Assignment - Display a list of Envelopes
-- Use Bootstrap class to create envelopes on startup
-- create service to return envelope list to controller
-- pass list to Thymeleaf view to display on index page
-
-
-* */
-
 @Data
 @Entity
-public class Envelope implements Scalable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Envelope extends BaseModel implements Scalable  {
 
     private String name;
     private String type;
@@ -36,12 +23,11 @@ public class Envelope implements Scalable {
     private PriorityScale priorityScale;
 
 
-//    // Large object
-//    @Lob
-//    @OneToOne(cascade = CascadeType.ALL)
-//    private byte[] image;
-//    /* We want the envelope to own it, so we use a cascade type and
-//    we will persist all operations. (making also envelope a target property on donation class) */
+    @Lob
+    @OneToOne(cascade = CascadeType.ALL)
+    private byte[] image;
+    /* We want the envelope to own it, so we use a cascade type and
+    we will persist all operations. (making also envelope a target property on donation class) */
 
 
 
@@ -53,7 +39,7 @@ public class Envelope implements Scalable {
     private Set<Category> categories;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "envelope")
-    private Set<Donation> donation;
+    private Set<Category> category;
 
 
     //todo add

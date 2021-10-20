@@ -6,11 +6,8 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class Notes {
+public class Notes extends BaseModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
     @OneToOne
     private Envelope envelope;

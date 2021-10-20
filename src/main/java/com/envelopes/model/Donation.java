@@ -7,22 +7,16 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
-public class Donation {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Donation extends BaseModel{
 
     private String recipientsName;
     private BigDecimal amount;
 
-
-    @OneToOne(fetch = FetchType.EAGER)
-    private UnitOfMeasure unitOfMeasure;
-
-
     @ManyToOne
     private Envelope envelope;
+
+    @ManyToOne
+    private Category category;
 
 
 

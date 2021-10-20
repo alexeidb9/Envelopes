@@ -1,8 +1,5 @@
 package com.envelopes.model;
 
-// Create 3 types of envelopes using object factory
-
-
 import com.envelopes.Operations.Review;
 
 import java.text.NumberFormat;
