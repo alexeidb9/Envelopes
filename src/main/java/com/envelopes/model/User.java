@@ -1,13 +1,7 @@
 package com.envelopes.model;
 
-import java.util.Collection;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -25,6 +19,9 @@ public class User extends BaseModel{
 	private String email;
 	
 	private String password;
+
+	protected User() {
+	}
 
 	public User(String firstName, String lastName, String email, String password) {
 		super();
