@@ -5,16 +5,16 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
+
+//@Entity
 @Data
 public class Category extends BaseModel{
 
     private String name;
     private String description;
 
-    @ManyToMany(mappedBy = "categories")
-    private Set<Envelope> envelopes;
-
+//    @ManyToMany(mappedBy = "categories")
+//    private Set<Envelope> envelopes;
 
     }
 

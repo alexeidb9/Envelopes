@@ -15,8 +15,8 @@ public class Donation extends BaseModel{
     @ManyToOne
     private Envelope envelope;
 
-    @ManyToOne
-    private Category category;
+//    @ManyToOne
+//    private Category category;
 
 
 
