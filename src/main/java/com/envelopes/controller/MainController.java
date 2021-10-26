@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-//    @GetMapping("/login")
-//    public String login() {
-//        return "login";
-//    }
-//
-//    @GetMapping("/")
-//    public String home() {
-//        return "index";
-//    }
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "Welcome to the home page!";
+    }
 
 
 
