@@ -1,10 +1,8 @@
 package com.envelopes.model;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
 
 @Data
 @Entity
@@ -16,6 +14,8 @@ public class Envelope extends BaseModel  {
     private String name;
     private String type;
     private Double balance;
+
+
 
 //    @Enumerated(value = EnumType.STRING)
 //    private PriorityScale priorityScale;

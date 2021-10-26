@@ -96,5 +96,9 @@
     <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.4.5" level="project" />
+    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.3.6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.6" level="project" />
   </component>
 </module>
