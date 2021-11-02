@@ -3,6 +3,7 @@ package com.envelopes.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -15,22 +16,11 @@ public class Envelope extends BaseModel  {
     private String type;
     private Double balance;
 
-
-
-//    @Enumerated(value = EnumType.STRING)
-//    private PriorityScale priorityScale;
-
-
-//    @Lob
-//    @Column(name = "photo", columnDefinition = "BLOB")
-//    private byte[] image;
-
-//
-//    @ManyToMany
-//    @JoinTable(name = "category",
-//            joinColumns = @JoinColumn(name = "envelope_id"),
-//            inverseJoinColumns = @JoinColumn(name = "category_id"))
-//    private Set<Category> categories;
+    @ManyToMany
+    @JoinTable(name = "category",
+            joinColumns = @JoinColumn(name = "envelope_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Set<Category> categories;
 
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "envelope")
 //    private Set<Category> category;
