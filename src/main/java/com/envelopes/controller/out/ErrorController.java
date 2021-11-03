@@ -12,7 +12,7 @@
 //import javax.servlet.http.HttpServletRequest;
 //
 //@Controller
-// public class EnvelopesAndPenniesErrorController implements ErrorController {
+// public class EnvelopesErrorController implements ErrorController {
 //
 //    private static final Logger LOGGER = LoggerFactory.getLogger(EnvelopesAndPenniesErrorController.class);
 //
