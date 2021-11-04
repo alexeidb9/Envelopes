@@ -3,6 +3,8 @@ package com.envelopes.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -15,9 +17,9 @@ public class Envelope extends BaseEntity {
     @Column(name = "title")
     private String title;
 
-    @ManyToOne
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Envelope")
     @Column(name = "type")
-    private EnvelopeCategory category;
+    private Set<EnvelopeCategory> category = new HashSet<>();
 
     @Column(name = "balance")
     private Double balance;

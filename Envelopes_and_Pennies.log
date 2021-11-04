@@ -155,7 +155,7 @@
 2021-10-17 16:58:24,967 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@7cd1ec54] for TypeConfiguration 
 2021-10-17 16:58:24,969 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 16:58:25,333 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 16:58:25,350 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 16:58:25,350 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 16:58:25,352 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 16:58:25,352 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@7cd1ec54] for TypeConfiguration 
 2021-10-17 16:58:25,353 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@5444f1c3] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@7cd1ec54] 
@@ -173,7 +173,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -181,7 +181,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 16:59:33,716 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74859 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 16:59:33,723 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -340,7 +340,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 16:59:35,465 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@d66502] for TypeConfiguration 
 2021-10-17 16:59:35,467 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 16:59:35,709 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 16:59:35,723 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 16:59:35,723 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 16:59:35,724 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 16:59:35,725 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@d66502] for TypeConfiguration 
 2021-10-17 16:59:35,725 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@6b52a40] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@d66502] 
@@ -358,7 +358,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -366,7 +366,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:02:29,131 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74874 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:02:29,138 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -525,7 +525,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:02:30,883 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@65a48cab] for TypeConfiguration 
 2021-10-17 17:02:30,885 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:02:31,127 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:02:31,151 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 17:02:31,151 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 17:02:31,152 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:02:31,152 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@65a48cab] for TypeConfiguration 
 2021-10-17 17:02:31,152 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@2553dcc0] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@65a48cab] 
@@ -543,7 +543,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -551,7 +551,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:10:14,593 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74910 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:10:14,602 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -710,7 +710,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:10:16,726 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@3c488b34] for TypeConfiguration 
 2021-10-17 17:10:16,727 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:10:17,020 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:10:17,033 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 17:10:17,033 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 17:10:17,035 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:10:17,035 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@3c488b34] for TypeConfiguration 
 2021-10-17 17:10:17,035 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@664254b6] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@3c488b34] 
@@ -728,7 +728,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -736,7 +736,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:16:12,414 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74965 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:16:12,427 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -894,7 +894,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:16:15,131 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@467af68c] for TypeConfiguration 
 2021-10-17 17:16:15,133 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:16:15,512 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:16:15,524 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 17:16:15,524 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 17:16:15,525 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:16:15,525 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@467af68c] for TypeConfiguration 
 2021-10-17 17:16:15,526 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@30cb223b] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@467af68c] 
@@ -912,7 +912,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -920,7 +920,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:17:01,477 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74970 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:17:01,483 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -1077,7 +1077,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:17:03,179 main [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
 2021-10-17 17:17:03,184 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@144a5e6e] for TypeConfiguration 
 2021-10-17 17:17:03,185 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
-2021-10-17 17:17:03,394 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRegistrationController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/UserRegistrationController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+2021-10-17 17:17:03,394 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRegistrationController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/UserRegistrationController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2021-10-17 17:17:03,396 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:17:03,396 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@144a5e6e] for TypeConfiguration 
 2021-10-17 17:17:03,397 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@4b475742] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@144a5e6e] 
@@ -1095,12 +1095,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.envelopes.controller.UserRegistrationController required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Parameter 0 of constructor in com.envelopes.controller.UserRegistrationController required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:18:56,937 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74987 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:18:56,943 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -1257,9 +1257,9 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:18:58,696 main [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
 2021-10-17 17:18:58,701 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@4b508371] for TypeConfiguration 
 2021-10-17 17:18:58,703 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
-2021-10-17 17:18:58,917 main [INFO] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.envelopes.service.UserService com.envelopes.config.SecurityConfiguration.getUserService() 
+2021-10-17 17:18:58,917 main [INFO] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.envelopes.services.UserService com.envelopes.config.SecurityConfiguration.getUserService()
 2021-10-17 17:18:58,947 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:18:58,965 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRegistrationController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/UserRegistrationController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+2021-10-17 17:18:58,965 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRegistrationController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/UserRegistrationController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2021-10-17 17:18:58,966 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:18:58,967 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@4b508371] for TypeConfiguration 
 2021-10-17 17:18:58,967 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@6719f206] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@4b508371] 
@@ -1277,12 +1277,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.envelopes.controller.UserRegistrationController required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Parameter 0 of constructor in com.envelopes.controller.UserRegistrationController required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:20:34,579 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 74997 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:20:34,586 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -1440,7 +1440,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:20:36,278 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@12c76d6e] for TypeConfiguration 
 2021-10-17 17:20:36,279 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:20:36,513 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:20:36,535 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 17:20:36,535 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 17:20:36,536 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:20:36,536 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@12c76d6e] for TypeConfiguration 
 2021-10-17 17:20:36,537 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@22172b00] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@12c76d6e] 
@@ -1458,7 +1458,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1466,7 +1466,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:22:32,738 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 75043 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:22:32,747 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -1624,7 +1624,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:22:34,517 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@46702c26] for TypeConfiguration 
 2021-10-17 17:22:34,518 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:22:34,763 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:22:34,778 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 17:22:34,778 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 17:22:34,779 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:22:34,779 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@46702c26] for TypeConfiguration 
 2021-10-17 17:22:34,779 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@5ffdd510] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@46702c26] 
@@ -1642,7 +1642,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1650,7 +1650,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:22:51,470 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 75059 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:22:51,477 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -1808,7 +1808,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-17 17:22:53,172 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@74b97416] for TypeConfiguration 
 2021-10-17 17:22:53,174 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:22:53,436 main [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
-2021-10-17 17:22:53,449 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021-10-17 17:22:53,449 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2021-10-17 17:22:53,450 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:22:53,451 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@74b97416] for TypeConfiguration 
 2021-10-17 17:22:53,451 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@50e24ea4] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@74b97416] 
@@ -1826,7 +1826,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Field userService in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1834,7 +1834,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-17 17:23:56,225 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting com.envelopes.EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 75071 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies)
 2021-10-17 17:23:56,233 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default
@@ -4929,7 +4929,7 @@ Caused by: java.lang.IllegalArgumentException: 'script' must not be null or empt
 2021-10-17 17:53:18,280 main [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
 2021-10-17 17:53:18,284 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@27bb74e1] for TypeConfiguration 
 2021-10-17 17:53:18,285 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
-2021-10-17 17:53:18,642 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/config/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+2021-10-17 17:53:18,642 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/config/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2021-10-17 17:53:18,643 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-17 17:53:18,643 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@27bb74e1] for TypeConfiguration 
 2021-10-17 17:53:18,643 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@206bd7a0] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@27bb74e1] 
@@ -4947,12 +4947,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Parameter 0 of constructor in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-18 17:20:28,835 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 77316 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies) 
 2021-10-18 17:20:28,844 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default 
@@ -7319,7 +7319,7 @@ Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany t
 2021-10-21 16:00:19,917 main [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
 2021-10-21 16:00:19,923 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@26a45089] for TypeConfiguration 
 2021-10-21 16:00:19,924 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
-2021-10-21 16:00:20,072 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeBootstrap' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/bootstrap/EnvelopeBootstrap.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.envelopes.repository.CategoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.envelopes.model.Category 
+2021-10-21 16:00:20,072 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeBootstrap' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/bootstrap/EnvelopeBootstrap.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.envelopes.repositories.CategoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.envelopes.model.Category
 2021-10-21 16:00:20,072 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-21 16:00:20,073 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@26a45089] for TypeConfiguration 
 2021-10-21 16:00:20,073 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@99223ac] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@26a45089] 
@@ -7330,7 +7330,7 @@ Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany t
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
 2021-10-21 16:00:20,098 main [ERROR] org.springframework.boot.SpringApplication - Application run failed 
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeBootstrap' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/bootstrap/EnvelopeBootstrap.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.envelopes.repository.CategoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.envelopes.model.Category
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeBootstrap' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/bootstrap/EnvelopeBootstrap.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.envelopes.repositories.CategoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.envelopes.model.Category
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.6.jar:5.3.6]
@@ -7352,7 +7352,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) [spring-boot-2.4.5.jar:2.4.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) [spring-boot-2.4.5.jar:2.4.5]
 	at com.envelopes.EnvelopesAndPenniesWebApplication.main(EnvelopesAndPenniesWebApplication.java:11) [classes/:?]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.envelopes.repository.CategoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.envelopes.model.Category
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryRepository' defined in com.envelopes.repositories.CategoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.envelopes.model.Category
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
@@ -7541,7 +7541,7 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.env
 2021-10-21 16:01:42,578 main [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
 2021-10-21 16:01:42,581 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@26a45089] for TypeConfiguration 
 2021-10-21 16:01:42,582 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
-2021-10-21 16:01:42,754 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/config/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+2021-10-21 16:01:42,754 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/config/SecurityConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.envelopes.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2021-10-21 16:01:42,755 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-21 16:01:42,756 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@26a45089] for TypeConfiguration 
 2021-10-21 16:01:42,756 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@3458dab6] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@26a45089] 
@@ -7559,12 +7559,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.service.UserService' that could not be found.
+Parameter 0 of constructor in com.envelopes.config.SecurityConfiguration required a bean of type 'com.envelopes.services.UserService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.envelopes.service.UserService' in your configuration.
+Consider defining a bean of type 'com.envelopes.services.UserService' in your configuration.
  
 2021-10-21 16:04:06,576 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - Starting EnvelopesAndPenniesWebApplication using Java 15 on alxndrpro.local with PID 83538 (/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes started by alxndr in /Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies) 
 2021-10-21 16:04:06,587 main [INFO] com.envelopes.EnvelopesAndPenniesWebApplication - No active profile set, falling back to default profiles: default 
@@ -7712,7 +7712,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 2021-10-21 16:04:08,249 main [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
 2021-10-21 16:04:08,253 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@16c5b50a] for TypeConfiguration 
 2021-10-21 16:04:08,254 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
-2021-10-21 16:04:08,446 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/EnvelopeController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envelopeService' defined in com.envelopes.service.EnvelopeService defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.service.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope! 
+2021-10-21 16:04:08,446 main [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/EnvelopeController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envelopeService' defined in com.envelopes.services.EnvelopeService defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.services.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
 2021-10-21 16:04:08,447 main [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default' 
 2021-10-21 16:04:08,447 main [TRACE] org.hibernate.type.spi.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@16c5b50a] for TypeConfiguration 
 2021-10-21 16:04:08,447 main [DEBUG] org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@49153009] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@16c5b50a] 
@@ -7723,7 +7723,7 @@ Consider defining a bean of type 'com.envelopes.service.UserService' in your con
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
 2021-10-21 16:04:08,475 main [ERROR] org.springframework.boot.SpringApplication - Application run failed 
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/EnvelopeController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envelopeService' defined in com.envelopes.service.EnvelopeService defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.service.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'envelopeController' defined in file [/Users/alxndr/Dev/IntelliJ/Other/Projects/Envelopes_and_Pennies/target/classes/com/envelopes/controller/EnvelopeController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envelopeService' defined in com.envelopes.services.EnvelopeService defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.services.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.6.jar:5.3.6]
@@ -7745,7 +7745,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) [spring-boot-2.4.5.jar:2.4.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) [spring-boot-2.4.5.jar:2.4.5]
 	at com.envelopes.EnvelopesAndPenniesWebApplication.main(EnvelopesAndPenniesWebApplication.java:11) [classes/:?]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envelopeService' defined in com.envelopes.service.EnvelopeService defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.service.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envelopeService' defined in com.envelopes.services.EnvelopeService defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.services.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
@@ -7759,7 +7759,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.6.jar:5.3.6]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.6.jar:5.3.6]
 	... 20 more
-Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.service.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract void com.envelopes.services.EnvelopeService.saveEmployee(com.envelopes.model.Envelope)! No property saveEmployee found for type Envelope!
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96) ~[spring-data-jpa-2.4.8.jar:2.4.8]
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107) ~[spring-data-jpa-2.4.8.jar:2.4.8]
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218) ~[spring-data-jpa-2.4.8.jar:2.4.8]

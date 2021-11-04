@@ -1,4 +1,4 @@
-package com.envelopes.repository;
+package com.envelopes.repositories;
 
 import com.envelopes.model.User;
 import org.springframework.data.repository.CrudRepository;
