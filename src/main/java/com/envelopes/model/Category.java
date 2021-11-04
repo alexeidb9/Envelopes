@@ -11,7 +11,7 @@ import java.util.Set;
 @MappedSuperclass
 public class Category extends BaseEntity {
 
-    @Column(name = "name");
+    @Column(name = "name")
     private String name;
 
 

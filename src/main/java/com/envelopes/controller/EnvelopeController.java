@@ -2,8 +2,8 @@ package com.envelopes.controller;
 
 import com.envelopes.exceptions.EnvelopeNotFoundException;
 import com.envelopes.model.Envelope;
-import com.envelopes.repository.EnvelopeRepository;
-import com.envelopes.service.EnvelopeService;
+import com.envelopes.repositories.EnvelopeRepository;
+import com.envelopes.services.EnvelopeService;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.stereotype.Controller;
